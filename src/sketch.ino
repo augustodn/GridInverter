@@ -59,7 +59,7 @@ void PWMSetup(){
             | _BV(WGM10);
     //FastPWM TOP fixed on 0x00FF, Prescaler x 1
     //Prescaler defined by 6 > CS1[2:0] > 1 = (8,64,256,1024)
-    TCCR1B = _BV(WGM12) | _BV(CS11) | _BV(CS10);
+    TCCR1B = _BV(WGM12) | _BV(CS10);
     //Enable interrupt flag on match (TCNT1 = OCR1x)
     //TIMSK1 = _BV(OCIE1C) | _BV(OCIE1B);
     TIMSK1 = _BV(OCIE1B);
