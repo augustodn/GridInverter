@@ -11,13 +11,16 @@ outside the Arduino IDE. Anyway you can open it with Arduino IDE as well.
 	
 So far we have here 3 folders:
 
-lib: Right now I'm including a library to implement a PID control system for the boost topology it just helps me with the duty cycle with the
+lib: -Library to implement a PID control system for the boost topology it just helps me with the duty cycle with the
 feedback on the boost output voltage.
+     -Header file for sketch.ino
          
 src: sketch.ino is the file where you have the code which goes on the microcontroller. It's written in C++ (even tough I am not abusing
 of objects and methods). I'm using a lot of time interruptions and an array with the SPWM which goes to the inveter H bridge.
 
 sims: Spice simulations in LTSpice. There you have schematics simulated with some square waves generating PWM. You can see also SPWM on the full bridge inverter (nice idea took from http://152fullbridge.blogspot.com.ar/).
+
+sch: Schematics done with EAGLE.
 
 Get LTSpice here: http://ltspice.linear-tech.com/software/LTspiceIV.exe. You can emulate it with wine if you're using Linux.
 Further info: http://www.linear.com/designtools/software/

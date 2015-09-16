@@ -33,10 +33,35 @@ ISR(TIMER1_COMPC_vect) {
     //Get value from ROM and update register
     //see sketch.h for sine1250 declaration
     OCR1C = pgm_read_word_near(sine1250 + count);
-   
-    if (count < 1250) count++;
+  
+    if (count < 1249) count++;
     else count = 0;
-    
+
+    /*
+    //In case we need an extra space on ROM for code
+    if (count < 938 && count > 314){
+        if (forward) count++;
+        else count--;
+    }
+    //handle the limits
+    else{
+        if (count == 938 || count == 314){
+            if (forward) {
+                count--;
+                forward = 0;
+            }
+            else{
+                forward = 1;
+                count++;
+            }
+        }
+        //Reset counter (just in case)
+        else {
+            count = 626;
+            forward = 0;
+        }
+    }
+    */
 }
 
 void FullBridge_PWM_Adjust(){
