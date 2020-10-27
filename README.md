@@ -1,7 +1,7 @@
 # Introduction
 Hello!,
 
-The final purpose for this project is design a grid tied inverter you can use with a solar panel. Design requisites are:
+The final purpose of this project is to design a grid tied inverter that you can use with a single solar panel. Design requisites are:
 
 * MPPT capabilities
 * Max Power output of ~300W
